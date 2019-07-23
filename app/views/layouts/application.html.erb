@@ -14,25 +14,38 @@
   <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto" >
       
       
-      <li class="nav-item  <%='active' if action_name == 'one'%>">
+      <li class="nav-item active  <%='active' if action_name == "one"%>">
         <a class="nav-link"> <%=link_to "One",pages_one_path %> <span class="sr-only">(current)</span></a>
       </li>
 
-      <li class="nav-item <%='active' if action_name == 'two'%>">
+      <li class="nav-item active <%='active' if action_name == 'two'%>">
         <a class="nav-link"> <%=link_to "Two",pages_two_path %> </a>
       </li>
-      <li class="nav-item <%='active' if action_name == 'two'%>">
+      <li class="nav-item <%='active' if action_name == 'three'%>">
         <a class="nav-link"> <%=link_to "Three",pages_three_path %> </a>
       </li>
+      <li class="nav-item <%='active' if controller_name == 'zombies' && action_name == 'index'%>">
+        <a class="nav-link"> <%=link_to "Zombies",zombies_path %> </a>
+      </li>
+
+
+      <li class="nav-item <%='active' if controller_name == 'players' && action_name == 'index'%>">
+        <a class="nav-link"> <%=link_to "Players",players_path %> </a>
+      </li>
+
+
+
+
     </ul>
   </div>
 </nav>
